@@ -8,7 +8,7 @@ while ($true) {
             $imvuLibPath = [IO.Path]::Combine($imvuFolderDefault, "..", "..", "library.zip")
             $imvuDest = [IO.Path]::Combine($imvuFolderDefault, "..")
             Expand-Archive -LiteralPath $imvuLibPath -DestinationPath $imvuDest
-            bre ak;
+            break;
         }
         "build" {
             $files = Get-ChildItem $imvuFolderDefault -Recurse -Filter *.pyo_dis
