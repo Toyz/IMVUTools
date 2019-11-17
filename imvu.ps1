@@ -11,7 +11,7 @@ while ($true) {
             break;
         }
         "build" {
-            $files = Get-ChildItem $imvuFolderDefault -Recurse -Filter *.pyo_dis
+            $files = Get-ChildItem $imvuFolderDefault -Recurse -Filter *.py -Exclude *.pyo
             foreach ($file in $files) { 
                 Write-Output $file.FullName
                 C:\Python27\python.exe -O -m compileall $file.FullName
